@@ -13,7 +13,7 @@ function DataHandler() {
 
     this.getCities = function () {
         console.log("Getting cities...");
-        const url = "http://localhost:8080/employee/listCities";
+        const url = env.apiUrl + "/employee/listCities";
         var self = this;
         fetch(url, {
             method: 'GET'
@@ -33,7 +33,7 @@ function DataHandler() {
 
     this.getRoles = function () {
         console.log("Getting roles...");
-        const url = "http://localhost:8080/employee/listRoles";
+        const url = env.apiUrl + "/employee/listRoles";
         var self = this;
         fetch(url, {
             method: 'GET'
@@ -88,13 +88,13 @@ function DataHandler() {
 
         if (pageTofetch > 0) {
             if (this.filterRole == null && this.filterCity == null) {
-                url = "http://localhost:8080/employee/list?page=" + pageTofetch + "&size=" + this.size;
+                url = env.apiUrl + "/employee/list?page=" + pageTofetch + "&size=" + this.size;
             } else if (this.filterRole != null && this.filterCity != null) {
-                url = "http://localhost:8080/employee/list/" + this.filterRole + "/" + this.filterCity + "?page=" + pageTofetch + "&size=" + this.size;
+                url = env.apiUrl + "/employee/list/" + this.filterRole + "/" + this.filterCity + "?page=" + pageTofetch + "&size=" + this.size;
             } else if (this.filterRole != null) {
-                url = "http://localhost:8080/employee/getByRole?role=" + this.filterRole + "&page=" + pageTofetch + "&size=" + this.size;
+                url = env.apiUrl + "/employee/getByRole?role=" + this.filterRole + "&page=" + pageTofetch + "&size=" + this.size;
             } else {
-                url = "http://localhost:8080/employee/getByCity?city=" + this.filterCity + "&page=" + pageTofetch + "&size=" + this.size;
+                url = env.apiUrl + "/employee/getByCity?city=" + this.filterCity + "&page=" + pageTofetch + "&size=" + this.size;
             }
         } else {
             this.enableDisableNavigation("prev", false);
