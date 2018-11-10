@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: lighter;
+  }
+  
+  html, body {
+    height: 100%;
+  }
+  
+  footer {
+    display: block;
+  }
+  
+  h1 {
+    font-family: 'Titillium Web', sans-serif;
+    color: #272727;
+    margin-bottom: 0px;
+    float: left;
+  }
+  
+ 
+  
+  select{
+    width: 24%;
+    height: 46px;
+    margin-top: 22px;
+  }
+  
+  .buscar{
+    width: 16%;
+    height: 46px;
+    margin-top: 22px;
+    background-color: #ffa629;
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+  
+  }
+  
+  .employees-container {
+    width: 100%;
+    max-width: 960px;
+    height: 100vh;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  
+  .alert{
+    width: 100%;
+    text-align: center;
+    font-weight: 400;
+    color: #aa0024;
+  }
+  
+  .filters-container {
+    width: 100%;
+    max-width: 960px;
+    height: 90px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background-color: #e1e3e4;
+    margin-bottom: 25px;
+    box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .flex-filtros {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+  
+  .flex-item {
+    background-color: white;
+    width: calc(20% - 20px);
+    height: fit-content;        
+    margin-bottom: 24px;
+    box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.2);
+    position: relative;
+  }
+  
+  .image{
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .icon{
+    display: inline-block;
+    vertical-align: text-bottom;
+    height: auto;
+    margin-bottom: 0px;
+  }
+  
+  .icon-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .city{
+    display: block;
+    font-size: 13px;
+    font-family: 'Open Sans', sans-serif;
+    margin-left: 5px;
+    margin-right: 15px;
+    color:white;
+  }
+  
+  .role{
+    font-size: 13px;
+    overflow: hidden;
+    font-family: 'Open Sans', sans-serif;
+    margin-left: 5px;
+    color: white;
+  }
+
+  h4 {
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 5px;
+    color: white;
+    overflow: ;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  
+  .name-container{
+    display: block;
+    position: absolute;
+    bottom: 35px;
+  }
+  .information:hover {
+    opacity: 1;
+  }
+  
+  .information {
+    background: rgba(111, 100, 184, 0.7);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    opacity: 0;     
+    left: 0;   
+    top: 0;
+    transition: 0.5s ease;
+    right: 0;
+    bottom: 0;
+    font-family: 'Titillium Web', sans-serif;    
+  } 
+ 
+  .information-container{
+    position: absolute;
+    bottom: 5px;
+  }
+  
+  select > .placeholder {
+    display: none;
+  }
+  
+  select{
+    font-weight: 500;
+    text-indent: 10%;
+    font-size: 13px;
+  }
+  
+  .buscar:hover{
+    background-color: #aa0024; 
+  }
+   
+  i{
+    color: #aa0024;
+  }
+
+/*arrows - ini*/
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: rgb(134, 134, 134);
+    background-color: white;
+    font-size: 100px;
+    border-radius: 0 3px 3px 0;
+    /*user-select: none;
+    -webkit-user-select: none;*/
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a background color */
+  .prev:hover,
+  .next:hover {
+    color:white;
+    background-color:gray ;
+  }
+
+  .disabled {
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.4;
+  }
+  
+  /*arrows - end*/
+  
+  @media(max-width: 991px) {
+    .flex-item {
+      width: calc(50% - 12px);
+    }
+  }
+  
+  @media(max-width: 767px) {
+    .flex-item {
+      width: 100%;
+      margin-bottom: 16px;
+    }
+  }
